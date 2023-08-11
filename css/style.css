@@ -108,6 +108,9 @@ section {
 .shadow-dark {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
+.mb {
+  margin-bottom: 60px;
+}
 /* aside */
 .aside {
   position: fixed;
@@ -459,4 +462,60 @@ p.my-profession {
   line-height: 25px;
   text-align: justify;
   color: var(--text-black-700);
+}
+
+/* Services */
+.services .container {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.services .services-item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.services .services-item .services-item-inner {
+  padding: 30px 15px;
+  text-align: center;
+  background-color: var(--bg-black-100);
+  border: 1px solid var(--bg-black-50);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  /* color: var(--text-black-700); */
+}
+.services .services-item .services-item-inner:hover {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+.services .services-item .services-item-inner .icon {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+}
+.services .services-item .services-item-inner .fa {
+  font-size: 40px;
+  line-height: 60px;
+  color: var(--skip-color);
+  transition: all 0.3s ease;
+}
+.services .services-item .services-item-inner:hover .icon {
+  background-color: var(--skip-color);
+}
+.services .services-item .services-item-inner:hover .icon .fa {
+  font-size: 25px;
+  color: #fff;
+}
+.services .services-item .services-item-inner h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--text-black-900);
+  text-transform: capitalize;
+}
+.services .services-item .services-item-inner p {
+  font-size: 16px;
+  color: var(--text-black-700);
+  line-height: 25px;
 }
