@@ -6,6 +6,13 @@
   --text-black-900: #302e4d;
   --text-black-700: #504e70;
 }
+body.dark {
+  --bg-black-900: #151515;
+  --bg-black-100: #222222;
+  --bg-black-50: #393939;
+  --text-black-900: #ffffff;
+  --text-black-700: #e9e9e9;
+}
 body {
   line-height: 1.5;
   font-size: 16px;
@@ -252,7 +259,7 @@ h3.hello span {
   font-weight: 700;
   color: var(--skip-color);
 }
-p.my-profession {
+.home .my-profession {
   font-size: 30px;
   margin: 15px 0;
 }
@@ -465,10 +472,6 @@ p.my-profession {
 }
 
 /* Services */
-.services .container {
-  padding-bottom: 40px;
-  padding-top: 40px;
-}
 .services .services-item {
   flex: 0 0 33.33%;
   max-width: 33.33%;
@@ -482,7 +485,6 @@ p.my-profession {
   border: 1px solid var(--bg-black-50);
   border-radius: 10px;
   transition: all 0.3s ease;
-  /* color: var(--text-black-700); */
 }
 .services .services-item .services-item-inner:hover {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
@@ -565,6 +567,7 @@ p.my-profession {
   flex: 0 0 25%;
   max-width: 25%;
   text-align: center;
+  margin-bottom: 20px;
 }
 .contact .contact-info-item .icon {
   display: inline-block;
@@ -616,10 +619,51 @@ p.my-profession {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 .contact .contact-form .form-item textarea.form-control {
-  height: 14px;
+  height: 140px;
 }
 .contact .contact-form .btn {
   height: 50px;
   padding-inline-start: 0 50px;
   cursor: pointer;
+}
+
+@media (max-width: 1199px) {
+  .aside {
+    left: -270px;
+  }
+  .main-content {
+    padding-left: 0;
+  }
+  .about .about-content .personal-info .info-item p span {
+    display: block;
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  .home .home-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .home .home-img {
+    display: none;
+  }
+  .contact .contact-info-item,
+  .portfolio .portfolio-item,
+  .services .services-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .contact .contact-form .col-6,
+  .contact .contact-info-item,
+  .services .services-item,
+  .portfolio .portfolio-item,
+  .about .about-content .education,
+  .about .about-content .experience,
+  .about .about-content .skills,
+  .about .about-content .personal-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
