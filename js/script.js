@@ -27,10 +27,34 @@ navList.forEach((v) => {
   const a = v.querySelector("a");
 
   a.addEventListener("click", () => {
-    navList.forEach((v) => {
+    sections.forEach((v) => {
+      v.classList.remove("back-section");
+    });
+
+    navList.forEach((v, i) => {
+      if (v.querySelector("a").classList.contains("active")) {
+        sections[i].classList.add("back-section");
+      }
       v.querySelector("a").classList.remove("active");
     });
     a.classList.add("active");
+
     showSection(a);
   });
+});
+
+// ===================== Aside toggler ====================== //
+const navToggleBtn = document.querySelector(".nav-toggler");
+const aside = document.querySelector(".aside");
+
+const asideSectionTogglerBtn = () => {
+  aside.classList.toggle("open");
+  navToggleBtn.classList.toggle("open");
+  sections.forEach((v) => {
+    v.classList.toggle("open");
+  });
+};
+
+navToggleBtn.addEventListener("click", () => {
+  asideSectionTogglerBtn();
 });

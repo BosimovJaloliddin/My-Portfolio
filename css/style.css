@@ -50,10 +50,23 @@ section {
   z-index: 0;
   overflow-y: auto;
   overflow-x: hidden;
+  transition: all 0.3s ease;
 }
 section.active {
   z-index: 2;
   opacity: 1;
+  animation: slideSection 0.9s ease;
+}
+@keyframes slideSection {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+section.back-section {
+  z-index: 1;
 }
 .hidden {
   display: none !important;
@@ -143,6 +156,7 @@ section.active {
   border: 1px solid var(--bg-black-50);
   background: var(--bg-black-100);
   z-index: 10;
+  transition: all 0.3s ease;
 }
 
 .aside .logo {
@@ -195,6 +209,7 @@ section.active {
   align-items: center;
 
   display: none;
+  transition: all 0.3s ease;
 
   background: var(--bg-black-100);
   border: 1px solid var(--bg-black-50);
@@ -208,6 +223,9 @@ section.active {
   height: 2px;
   background: var(--skip-color);
 }
+.aside .nav-toggler.open span {
+  background-color: transparent;
+}
 .aside .nav-toggler span::before {
   content: "";
   position: absolute;
@@ -217,6 +235,10 @@ section.active {
   height: 2px;
   background: var(--skip-color);
 }
+.aside .nav-toggler.open span::before {
+  transform: rotate(45deg);
+  top: 50%;
+}
 .aside .nav-toggler span::after {
   content: "";
   position: absolute;
@@ -225,6 +247,10 @@ section.active {
   width: 18px;
   height: 2px;
   background: var(--skip-color);
+}
+.aside .nav-toggler.open span::after {
+  transform: rotate(-45deg);
+  top: 50%;
 }
 .aside .nav {
   margin-top: 50px;
@@ -640,12 +666,25 @@ h3.hello span {
   .aside {
     left: -270px;
   }
-  .main-content {
-    padding-left: 0;
+  .aside.open {
+    left: 0;
+  }
+  .aside .nav-toggler {
+    display: flex;
+    left: 30px;
+  }
+  .aside .nav-toggler.open {
+    left: 280px;
   }
   .about .about-content .personal-info .info-item p span {
     display: block;
     margin-left: 0;
+  }
+  section {
+    left: 0;
+  }
+  section.open {
+    left: 270px;
   }
 }
 @media (max-width: 991px) {
