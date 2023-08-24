@@ -34,8 +34,3 @@ dayNight.addEventListener("click", () => {
   dayNight.querySelector("i").classList.toggle("fa-moon");
   document.body.classList.toggle("dark");
 });
-// window.addEventListener("load", () => {
-//   document.body.classList.contains("dark")
-//     ? dayNight.querySelector("i").classList.add("fa-sun")
-//     : dayNight.querySelector("i").classList.add("fa-moon");
-// });
