@@ -140,6 +140,7 @@ section.back-section {
 .mb {
   margin-bottom: 60px;
 }
+
 /* aside */
 .aside {
   position: fixed;
@@ -576,6 +577,14 @@ h3.hello span {
   max-width: 33.33%;
   margin-bottom: 30px;
 }
+.portfolio .texnologiy {
+  text-align: center;
+}
+.portfolio .texnologiy span {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-black-900);
+}
 .portfolio .portfolio-item .portfolio-item-inner {
   border: 6px solid var(--bg-black-100);
   border-radius: 10px;
@@ -591,7 +600,7 @@ h3.hello span {
   position: absolute;
   top: 0;
   left: 15px;
-  bottom: 0;
+  bottom: 8.5%;
   right: 15px;
   background: rgba(1, 1, 1, 0.6);
   border-radius: 7px;
@@ -614,6 +623,10 @@ h3.hello span {
 .portfolio .portfolio-item .portfolio-bg:hover {
   opacity: 1;
 }
+.portfolio-item:hover .texnologiy span {
+  color: var(--skip-color);
+}
+
 /* constact */
 .contact-title {
   font-size: 24px;
